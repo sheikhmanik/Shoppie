@@ -1,0 +1,803 @@
+<!doctype html>
+<html class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoppie</title>
+  <link rel="icon" type="image/x-icon" href="/images/Thumbs.db">
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-gray-100">
+
+
+
+<!-- Header -->
+<header class="top-0 py-4 bg-white shadow-lg">
+
+    <div class="container mx-auto flex items-center justify-between pl-2 pr-2">
+
+        <!-- Logo -->
+
+        <a class="flex pr-4" href="index.html">
+            <img class="min-w-[132px]" src="/images/logo.svg">
+        </a>
+
+        <!-- Search Bar -->
+
+        <div class="relative flex w-full max-w-xl">
+            <span class="absolute flex py-3 px-4 text-lg">
+                <i class="fa fa-search"></i>
+            </span>
+            <input type="text" placeholder="Search here!" class="border py-2 w-full max-w-xl border-r-transparent rounded-l-lg px-11 focus:outline-none">
+            <button class="px-4 rounded-r-lg bg-green-500 hover:bg-green-400 text-white hover:bg-transparent 
+            hover:text-black hover:border">Search</button>
+        </div>
+
+        <!-- Icons -->
+
+        <div class="lg:flex hidden pl-4 space-x-8">
+            <div class="flex items-center ">
+                <a href="wishlist.html" class="text-center transition relative">
+                    <div class="text-2xl">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="text-xs leading-3">Wish List</div>
+                    <span class="absolute p-1 top-0 right-0 rounded-full bg-blue-900
+                    w-5 h-5 flex items-center justify-center text-white text-xs">8</span>
+                </a>  
+            </div>
+
+            <div class="flex items-center ">
+                <a href="cart.html" class="text-center transition relative">
+                    <div class="text-2xl">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="text-xs leading-3">Cart</div>
+                    <span class="absolute p-1 top-0 -right-2 rounded-full bg-blue-900
+                    w-5 h-5 flex items-center justify-center text-white text-xs">5</span>
+                </a>  
+            </div>
+            
+            <div class="flex items-center ">
+                <a href="login.html" class="text-center transition relative">
+                    <div class="text-2xl">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="text-xs leading-3">Account</div>
+                </a>  
+            </div>
+        </div>
+
+    </div>
+</header>
+<!-- Header End -->
+
+
+
+<!-- Navbar -->
+<nav class="bg-gray-800">
+
+    <div class="container mx-auto lg:flex hidden">
+
+        <div class="relative flex items-center px-8 py-4 bg-red-500 cursor-pointer group">
+
+            <!-- All Categories -->
+            <a class="text-white">
+                <i class="fa fa-bars"></i>
+            </a>
+            <span class="text-white ml-6">All Categories</span>
+
+            <!-- Dropdown -->
+            <div class="absolute w-full left-0 top-full opacity-0 invisible group-hover:opacity-100
+            group-hover:visible divide-y divide-dashed divide-gray-400 duration-500">
+                <a class="flex items-center py-4 pl-4 bg-gray-200 hover:bg-gray-300">
+                    <img class="w-5 h-5 object-contain" src="/images/logo.svg">
+                    <span class="ml-8">Sofa</span>
+                </a>
+                <a class="flex items-center pl-4 bg-gray-200 hover:bg-gray-300 py-4">
+                    <img class="w-5 h-5 object-contain" src="/images/logo.svg">
+                    <span class="ml-8">Office</span>
+                </a>
+                <a class="flex items-center pl-4 bg-gray-200 hover:bg-gray-300 py-4">
+                    <img class="w-5 h-5 object-contain" src="/images/logo.svg">
+                    <span class="ml-8">Outdoor</span>
+                </a>
+                <a class="flex items-center pl-4 bg-gray-200 hover:bg-gray-300 py-4">
+                    <img class="w-5 h-5 object-contain" src="/images/logo.svg">
+                    <span class="ml-8">Mattress</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="flex items-center justify-between flex-grow pl-12">
+            <div class="flex items-center space-x-6 capitalize">
+                <a href="index.html" class="text-white">Home</a>
+                <a href="shop.html" class="text-gray-300 hover:text-white">Shop</a>
+                <a href="contact.html" class="text-gray-300 hover:text-white">Contact</a>
+                <a href="about.html" class="text-gray-300 hover:text-white">About</a>
+            </div>
+            <!-- <a href="#" class="text-gray-300 hover:text-white pr-4">Login/Register</a> -->
+            <a href="view.html" class="text-yellow-300 text-xl hover:text-white pr-4 uppercase font-bold">Summer Special</a>
+        </div>
+    </div>
+    <a href="view.html" class="lg:hidden flex items-center justify-center py-4 text-yellow-300 text-xl hover:text-white pr-4 uppercase font-bold">Summer Special</a>
+</nav>
+<!-- Navbar End -->
+
+
+
+<!-- mobile menu -->
+<div>
+    <div class="lg:hidden fixed bottom-0 bg-gray-800 w-full z-40">
+        <div class="flex items-center justify-around p-3 text-gray-300">
+    
+            <div class="flex items-center hover:text-gray-100">
+                <a class="text-center transition relative cursor-pointer" id="Categories">
+                    <div class="text-2xl">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <div class="text-xs leading-3">Categories</div>
+                </a>  
+            </div>
+    
+            <div class="flex items-center hover:text-gray-100">
+                <a href="wishlist.html" class="text-center transition relative">
+                    <div class="text-2xl">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="text-xs leading-3">Wish List</div>
+                    <span class="absolute p-1 top-0 right-0 rounded-full bg-blue-900
+                    w-5 h-5 flex items-center justify-center text-white text-xs">8</span>
+                </a>  
+            </div>
+    
+            <div class="flex items-center hover:text-gray-100">
+                <a href="cart.html" class="text-center transition relative">
+                    <div class="text-2xl">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="text-xs leading-3">Cart</div>
+                    <span class="absolute p-1 top-0 -right-2 rounded-full bg-blue-900
+                    w-5 h-5 flex items-center justify-center text-white text-xs">5</span>
+                </a>  
+            </div>
+            
+            <div class="flex items-center hover:text-gray-100">
+                <a href="login.html" class="text-center transition relative">
+                    <div class="text-2xl">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="text-xs leading-3">Account</div>
+                </a>  
+            </div>
+        </div>
+    </div>
+    <div class="fixed top-0 left-0 w-full h-full z-50 bg-black bg-opacity-30 hidden" id="sideMenu">
+        <div class="absolute bg-white w-60 h-full text-gray-100 p-10 space-y-10">
+            <div class="flex items-center justify-between">
+                <h1 class="text-2xl font-bold text-black">Menu</h1>
+                <a class="text-gray-700 hover:text-gray-900 cursor-pointer text-xl p-3" id="sideMenuClose"><i class="fa fa-times"></i></a>
+            </div>
+            <div class="grid capitalize text-lg font-semibold space-y-3">
+                <a class="text-gray-900">Home</a>
+                <a href="shop.html" class="text-gray-700 hover:text-gray-900">Shop</a>
+                <a href="contact.html" class="text-gray-700 hover:text-gray-900">Contact</a>
+                <a href="about.html" class="text-gray-700 hover:text-gray-900">About</a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+<!-- mobile menu end -->
+
+
+
+<!-- hero section -->
+    <div class="bg-cover bg-no-repeat bg-center sm:py-36 pt-16 pb-24 bg-[url('/images/offer-bg.png')]">
+        <div class="container mx-auto px-8">
+            <h1 class="capitalize text-6xl mb-4 text-gray-800">
+                best summer <br> collection.
+            </h1>
+            <p class="min-w-[300px] max-w-[450px]">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula 
+                eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, 
+                pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla 
+                vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut.
+            </p>
+            <button class="px-6 py-3 bg-blue-800 hover:bg-blue-700 mt-5 rounded-r-full text-white
+            font-bold hover:underline">Shop Now</button>
+        </div>
+    </div>
+<!-- hero section End -->
+
+
+
+<!-- Feature -->
+    <div class="container mx-auto py-16">
+        <div class="w-[80%] grid xl:grid-cols-3 gap-6 mx-auto justify-center">
+
+            <div class="w-80 h-25 border border-gray-400 px-6 py-6 flex items-center justify-center gap-5">
+                <img src="/images/hero-shape-1.png" class="w-12 h-12 object-contain">
+                <div class="">
+                    <h4 class="text-lg font-medium capitalize">Free Shoping</h4>
+                    <p class="text-gray-500 text-sm">order over 200$</p>
+                </div>
+            </div>
+
+            <div class="w-80 h-25 border border-gray-400 px-6 py-6 flex items-center justify-center gap-5">
+                <img src="/images/hero-shape-1.png" class="w-12 h-12 object-contain">
+                <div class="">
+                    <h4 class="text-lg font-medium capitalize">Money Returns</h4>
+                    <p class="text-gray-500 text-sm">30 days money return</p>
+                </div>
+            </div>
+
+            <div class="w-80 h-25 border border-gray-400 px-6 py-6 flex items-center justify-center gap-5">
+                <img src="/images/hero-shape-1.png" class="w-12 h-12 object-contain">
+                <div class="">
+                    <h4 class="text-lg font-medium capitalize">24/7 Support</h4>
+                    <p class="text-gray-500 text-sm">customer spport</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<!-- Feature End -->
+
+
+
+<!-- Categories -->
+    <div class="container mx-auto py-16">
+        <h2 class="flex items-center justify-center text-3xl font-medium text-gray-800 
+        uppercase mb-6">shop by Categories</h2>
+        <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-3">
+
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="/images/product-1.png" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black opacity-40 flex items-center
+                justify-center text-white font-medium group-hover:bg-opacity-60">Shirt</a>
+            </div>
+
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="/images/product-2.png" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black opacity-40 flex items-center
+                justify-center text-white font-medium group-hover:bg-opacity-60">Sunglass</a>
+            </div>
+
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="/images/product-3.png" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black opacity-40 flex items-center
+                justify-center text-white font-medium group-hover:bg-opacity-60">Pant</a>
+            </div>
+
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="/images/product-4.png" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black opacity-40 flex items-center
+                justify-center text-white font-medium group-hover:bg-opacity-60">Cap</a>
+            </div>
+
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="/images/product-5.png" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black opacity-40 flex items-center
+                justify-center text-white font-medium group-hover:bg-opacity-60">T-Shirt</a>
+            </div>
+
+            <div class="relative rounded-sm overflow-hidden group">
+                <img src="/images/product-6.png" class="w-full">
+                <a href="#" class="absolute inset-0 bg-black opacity-40 flex items-center
+                justify-center text-white font-medium group-hover:bg-opacity-60">Jungle Bottle</a>
+            </div>
+
+        </div>
+    </div>
+<!-- Categories End -->
+
+
+
+<!-- product -->
+    <div class="container mx-auto pb-16">
+        <h2 class="flex items-center justify-center text-3xl font-medium text-gray-800 uppercase mb-6">top new arrival</h2>
+
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+
+            <!-- single product -->
+            <div class="bg-white shadow-md overflow-hidden rounded-sm group">
+
+                <!-- image -->
+                <div class="relative">
+
+                    <img src="/images/product-7.png" class="w-full">
+
+                    <div class="absolute inset-0 flex items-center justify-center bg-black
+                    bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100">
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-heart"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- image end -->
+
+                <!-- content part -->
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="text-xl uppercase font-medium mb-2 ">footwear</h4>
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <p class="font-semibold text-xl text-blue-900">$45.00</p>
+                        <p class="font-semibold text-xm text-black line-through">$55.00</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <div class="flex items-center text-yellow-400 gap-1">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="text-xs text-gray-600 ml-2">(150)</div>
+                    </div>
+                </div>
+                <!-- content part end -->
+
+                <a class="block w-full bg-red-500 rounded-b text-center items-center 
+                border border-gray-400 capitalize text-xl font-semibold py-2 text-white hover:bg-transparent
+                hover:text-black cursor-pointer">add to cart</a>
+
+            </div>
+            <div class="bg-white shadow-md overflow-hidden rounded-sm group">
+
+                <!-- image -->
+                <div class="relative">
+
+                    <img src="/images/product-8.png" class="w-full">
+
+                    <div class="absolute inset-0 flex items-center justify-center bg-black
+                    bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100">
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-heart"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- image end -->
+
+                <!-- content part -->
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="text-xl uppercase font-medium mb-2 ">hat</h4>
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <p class="font-semibold text-xl text-blue-900">$20.00</p>
+                        <p class="font-semibold text-xm text-black line-through">$30.00</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <div class="flex items-center text-yellow-400 gap-1">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="text-xs text-gray-600 ml-2">(150)</div>
+                    </div>
+                </div>
+                <!-- content part end -->
+
+                <a class="block w-full bg-red-500 rounded-b text-center items-center 
+                border border-gray-400 capitalize text-xl font-semibold py-2 text-white hover:bg-transparent
+                hover:text-black cursor-pointer">add to cart</a>
+
+            </div>
+            <div class="bg-white shadow-md overflow-hidden rounded-sm group">
+
+                <!-- image -->
+                <div class="relative">
+
+                    <img src="/images/product-9.png" class="w-full">
+
+                    <div class="absolute inset-0 flex items-center justify-center bg-black
+                    bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100">
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-heart"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- image end -->
+
+                <!-- content part -->
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="text-xl uppercase font-medium mb-2 ">pant</h4>
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <p class="font-semibold text-xl text-blue-900">$35.00</p>
+                        <p class="font-semibold text-xm text-black line-through">$45.00</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <div class="flex items-center text-yellow-400 gap-1">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="text-xs text-gray-600 ml-2">(150)</div>
+                    </div>
+                </div>
+                <!-- content part end -->
+
+                <a class="block w-full bg-red-500 rounded-b text-center items-center 
+                border border-gray-400 capitalize text-xl font-semibold py-2 text-white hover:bg-transparent
+                hover:text-black cursor-pointer">add to cart</a>
+
+            </div>
+            <div class="bg-white shadow-md overflow-hidden rounded-sm group">
+
+                <!-- image -->
+                <div class="relative">
+
+                    <img src="/images/product-2.png" class="w-full">
+
+                    <div class="absolute inset-0 flex items-center justify-center bg-black
+                    bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100">
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-heart"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- image end -->
+
+                <!-- content part -->
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="text-xl uppercase font-medium mb-2 ">Sunglass</h4>
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <p class="font-semibold text-xl text-blue-900">$25.00</p>
+                        <p class="font-semibold text-xm text-black line-through">$35.00</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <div class="flex items-center text-yellow-400 gap-1">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="text-xs text-gray-600 ml-2">(150)</div>
+                    </div>
+                </div>
+                <!-- content part end -->
+
+                <a class="block w-full bg-red-500 rounded-b text-center items-center 
+                border border-gray-400 capitalize text-xl font-semibold py-2 text-white hover:bg-transparent
+                hover:text-black cursor-pointer">add to cart</a>
+
+            </div>
+            <!-- single product end -->
+        </div>
+    </div>
+<!-- product end -->
+
+
+
+<!-- ad section -->
+    <div class="w-full h-80 bg-no-repeat bg-cover bg-center bg-[url('/images/shopify-landing-pages-770x384.jpg')]">
+    </div>
+<!-- ad section end -->
+
+
+
+<!-- recomended section -->
+    <div class="container mx-auto py-16">
+        <h2 class="flex items-center justify-center text-3xl font-medium text-gray-800 uppercase mb-6">recomended for you</h2>
+
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+
+            <!-- single product -->
+            <div class="bg-white shadow-md overflow-hidden rounded-sm group">
+
+                <!-- image -->
+                <div class="relative">
+
+                    <img src="/images/product-7.png" class="w-full">
+
+                    <div class="absolute inset-0 flex items-center justify-center bg-black
+                    bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100">
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-heart"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- image end -->
+
+                <!-- content part -->
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="text-xl uppercase font-medium mb-2 ">footwear</h4>
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <p class="font-semibold text-xl text-blue-900">$45.00</p>
+                        <p class="font-semibold text-xm text-black line-through">$55.00</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <div class="flex items-center text-yellow-400 gap-1">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="text-xs text-gray-600 ml-2">(150)</div>
+                    </div>
+                </div>
+                <!-- content part end -->
+
+                <a class="block w-full bg-red-500 rounded-b text-center items-center 
+                border border-gray-400 capitalize text-xl font-semibold py-2 text-white hover:bg-transparent
+                hover:text-black cursor-pointer">add to cart</a>
+
+            </div>
+            <div class="bg-white shadow-md overflow-hidden rounded-sm group">
+
+                <!-- image -->
+                <div class="relative">
+
+                    <img src="/images/product-8.png" class="w-full">
+
+                    <div class="absolute inset-0 flex items-center justify-center bg-black
+                    bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100">
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-heart"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- image end -->
+
+                <!-- content part -->
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="text-xl uppercase font-medium mb-2 ">hat</h4>
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <p class="font-semibold text-xl text-blue-900">$20.00</p>
+                        <p class="font-semibold text-xm text-black line-through">$30.00</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <div class="flex items-center text-yellow-400 gap-1">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="text-xs text-gray-600 ml-2">(150)</div>
+                    </div>
+                </div>
+                <!-- content part end -->
+
+                <a class="block w-full bg-red-500 rounded-b text-center items-center 
+                border border-gray-400 capitalize text-xl font-semibold py-2 text-white hover:bg-transparent
+                hover:text-black cursor-pointer">add to cart</a>
+
+            </div>
+            <div class="bg-white shadow-md overflow-hidden rounded-sm group">
+
+                <!-- image -->
+                <div class="relative">
+
+                    <img src="/images/product-9.png" class="w-full">
+
+                    <div class="absolute inset-0 flex items-center justify-center bg-black
+                    bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100">
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-heart"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- image end -->
+
+                <!-- content part -->
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="text-xl uppercase font-medium mb-2 ">pant</h4>
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <p class="font-semibold text-xl text-blue-900">$35.00</p>
+                        <p class="font-semibold text-xm text-black line-through">$45.00</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <div class="flex items-center text-yellow-400 gap-1">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="text-xs text-gray-600 ml-2">(150)</div>
+                    </div>
+                </div>
+                <!-- content part end -->
+
+                <a class="block w-full bg-red-500 rounded-b text-center items-center 
+                border border-gray-400 capitalize text-xl font-semibold py-2 text-white hover:bg-transparent
+                hover:text-black cursor-pointer">add to cart</a>
+
+            </div>
+            <div class="bg-white shadow-md overflow-hidden rounded-sm group">
+
+                <!-- image -->
+                <div class="relative">
+
+                    <img src="/images/product-2.png" class="w-full">
+
+                    <div class="absolute inset-0 flex items-center justify-center bg-black
+                    bg-opacity-40 gap-2 opacity-0 group-hover:opacity-100">
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a class="flex items-center justify-center text-white text-lg w-9 h-9
+                        rounded-full bg-red-700 hover:bg-gray-700">
+                            <i class="fa fa-heart"></i>
+                        </a>
+                    </div>
+
+                </div>
+                <!-- image end -->
+
+                <!-- content part -->
+                <div class="pt-4 pb-3 px-4">
+                    <a href="#">
+                        <h4 class="text-xl uppercase font-medium mb-2 ">Sunglass</h4>
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <p class="font-semibold text-xl text-blue-900">$25.00</p>
+                        <p class="font-semibold text-xm text-black line-through">$35.00</p>
+                    </div>
+                    <div class="flex items-center mt-1">
+                        <div class="flex items-center text-yellow-400 gap-1">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <div class="text-xs text-gray-600 ml-2">(150)</div>
+                    </div>
+                </div>
+                <!-- content part end -->
+
+                <a class="block w-full bg-red-500 rounded-b text-center items-center 
+                border border-gray-400 capitalize text-xl font-semibold py-2 text-white hover:bg-transparent
+                hover:text-black cursor-pointer">add to cart</a>
+
+            </div>
+            <!-- single product end -->
+        </div>
+    </div>
+<!-- recomended section end -->
+
+
+
+<!-- footer -->
+    <div class="container mx-auto py-16 px-5">
+        <div class="grid lg:grid-cols-2 lg:space-y-0 space-y-10">
+            <!-- footer text -->
+            <div class="col-span-1 space-y-8">
+                <img src="/images/logo.svg">
+                <p class="text-gray-500">
+                    orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in r.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-gray-400 text-2xl">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-400 text-2xl">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-400 text-2xl">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-gray-400 text-2xl">
+                        <i class="fa fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- footer text end -->
+
+            <!-- footer links -->
+            <div class="grid gap-8 lg:pl-8">
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Solutions</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">marketing</a>
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">analytics</a>
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">pricing</a>
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">low cost</a>
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">budget friendly</a>
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">shop</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-wider">miscellaneus</h3>
+                        <div class="mt-4 space-y-4">
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">member</a>
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">analytics</a>
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">doremon</a>
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">nikon</a>
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">pokemon</a>
+                            <a href="#" class="block text-gray-500 hover:text-gray-400 capitalize text-sm">c&b</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer links end -->
+        </div>
+    </div>
+<!-- footer end -->
+
+
+
+<!-- copyright -->
+    <div class="bg-gray-800">
+        <div class="container mx-auto flex items-center justify-between py-4 px-4">
+            <p class="text-white">© Shoppie - All Right Reserved</p>
+            <a href="#"><img src="/images/payment-method.png" class="h-5 rotate-180"></a>
+        </div>
+    </div>
+<!-- copyright end -->
+
+
+
+<script src="script.js"></script>
+</body>
+</html>

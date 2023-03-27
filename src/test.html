@@ -1,0 +1,146 @@
+<!doctype html>
+<html class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shoppie</title>
+  <link rel="icon" type="image/x-icon" href="/images/Thumbs.db">
+  <link rel="stylesheet" href="/dist/output.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-gray-100">
+
+
+
+<!-- Header -->
+    <header class="top-0 py-4 bg-white shadow-lg">
+
+        <div class="container mx-auto flex items-center justify-between pl-2 pr-2">
+
+            <!-- Logo -->
+
+            <a class="flex pr-4" href="index.html">
+                <img src="/images/logo.svg">
+            </a>
+
+            <!-- Search Bar -->
+
+            <div class="relative flex w-full max-w-xl">
+                <span class="absolute flex py-3 px-4 text-lg">
+                    <i class="fa fa-search"></i>
+                </span>
+                <input type="text" placeholder="Search here!" 
+                class="border py-2 w-full max-w-xl border-r-transparent
+                rounded-l-xl px-11 focus:outline-none">
+                <button class="px-4 rounded-r-xl bg-green-500 hover:bg-green-400 text-white hover:bg-transparent 
+                hover:text-black hover:border">Search</button>
+            </div>
+
+            <!-- Icons -->
+
+            <div class="lg:flex hidden pl-4 space-x-8">
+                <div class="flex items-center ">
+                    <a href="wishlist.html" class="text-center transition relative">
+                        <div class="text-2xl">
+                            <i class="fa fa-heart"></i>
+                        </div>
+                        <div class="text-xs leading-3">Wish List</div>
+                        <span class="absolute p-1 top-0 right-0 rounded-full bg-blue-900
+                        w-5 h-5 flex items-center justify-center text-white text-xs">8</span>
+                    </a>  
+                </div>
+
+                <div class="flex items-center ">
+                    <a href="cart.html" class="text-center transition relative">
+                        <div class="text-2xl">
+                            <i class="fa fa-envelope"></i>
+                        </div>
+                        <div class="text-xs leading-3">Cart</div>
+                        <span class="absolute p-1 top-0 -right-2 rounded-full bg-blue-900
+                        w-5 h-5 flex items-center justify-center text-white text-xs">5</span>
+                    </a>  
+                </div>
+                
+                <div class="flex items-center ">
+                    <a href="login.html" class="text-center transition relative">
+                        <div class="text-2xl">
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <div class="text-xs leading-3">Account</div>
+                    </a>  
+                </div>
+            </div>
+
+        </div>
+    </header>
+<!-- Header End -->
+
+
+
+<!-- Navbar -->
+    <nav class="bg-gray-800">
+
+        <div class="container mx-auto lg:flex hidden">
+
+            <div class="relative flex items-center px-8 py-4 bg-red-500 cursor-pointer group">
+
+                <!-- All Categories -->
+                <a class="text-white">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <span class="text-white ml-6">All Categories</span>
+
+                <!-- Dropdown -->
+                <div class="absolute w-full left-0 top-full opacity-0 invisible group-hover:opacity-100
+                group-hover:visible divide-y divide-dashed divide-gray-400 duration-500">
+                    <a class="flex items-center py-4 pl-4 bg-gray-200 hover:bg-gray-300">
+                        <img class="w-5 h-5 object-contain" src="/images/logo.svg">
+                        <span class="ml-8">Sofa</span>
+                    </a>
+                    <a class="flex items-center pl-4 bg-gray-200 hover:bg-gray-300 py-4">
+                        <img class="w-5 h-5 object-contain" src="/images/logo.svg">
+                        <span class="ml-8">Office</span>
+                    </a>
+                    <a class="flex items-center pl-4 bg-gray-200 hover:bg-gray-300 py-4">
+                        <img class="w-5 h-5 object-contain" src="/images/logo.svg">
+                        <span class="ml-8">Outdoor</span>
+                    </a>
+                    <a class="flex items-center pl-4 bg-gray-200 hover:bg-gray-300 py-4">
+                        <img class="w-5 h-5 object-contain" src="/images/logo.svg">
+                        <span class="ml-8">Mattress</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Navbar Links -->
+            <div class="flex items-center justify-between flex-grow pl-12">
+                <div class="flex items-center space-x-6 capitalize">
+                    <a href="#" class="text-white">Home</a>
+                    <a href="shop.html" class="text-gray-300 hover:text-white">Shop</a>
+                    <a href="contact.html" class="text-gray-300 hover:text-white">Contact</a>
+                    <a href="about.html" class="text-gray-300 hover:text-white">About</a>
+                </div>
+                <!-- <a href="#" class="text-gray-300 hover:text-white pr-4">Login/Register</a> -->
+                <a href="view.html" class="text-yellow-300 text-xl hover:text-white pr-4 uppercase font-bold">Summer Special</a>
+            </div>
+        </div>
+        <a href="view.html" class="lg:hidden flex items-center justify-center py-4 text-yellow-300 text-xl hover:text-white pr-4 uppercase font-bold">Summer Special</a>
+    </nav>
+<!-- Navbar End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <script src="script.js"></script> -->
+</body>
+</html>
